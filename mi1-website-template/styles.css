@@ -1,0 +1,25 @@
+/* Alle Elemente können (und sollen) verändert werden. */
+
+body {
+  color: #323232;
+}
+
+#carouselExampleControls {
+  margin-bottom: 4rem;
+}
+
+.col {
+  text-align: center;
+}
+
+.card {
+  margin: 4rem 0 4rem 0;
+}
+
+footer {
+  margin-top: 4rem;
+}
+
+h1 {
+  text-align:center
+}

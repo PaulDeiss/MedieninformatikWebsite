@@ -1,0 +1,175 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Baskerville Old Face';
+  
+}
+h1{
+  font-size: 80px;
+  font-family: 'Baskerville Old Face';
+  color:#FFD700;
+  text-align: center;
+  z-index: 10;
+}
+h2{
+  font-size: 40px;
+  font-family: 'Baskerville Old Face';
+  text-align: center;
+  color:#FFFAFA;
+}
+h3{
+  font-size: 26px;
+  font-family: 'Baskerville Old Face';
+  text-align: center;
+  color:#FFFAFA;
+}
+p{
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Baskerville Old Face';
+  color:#FFFAFA;
+}
+a{
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Baskerville Old Face';
+  color:#FFFAFA;
+}
+li{
+  margin-top: -50px;
+}
+p:any-link {
+  color: #FFD700;
+}
+a:any-link {
+  color: #FFD700;
+}
+.col{
+  width: 80vw;
+  opacity: 0.7;
+  border: solid 2px;
+  border-color: #FFD700;
+  background-color:  #4f4f4f;
+  border-radius: 20px;
+}
+
+@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+  from {background-position:0 0;}
+  to {background-position:10000px 0;}
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.stars, .twinkling, .clouds {
+position:fixed;
+top:0;
+left:0;
+right:0;
+bottom:0;
+width:100%;
+height:100%;
+display:block;
+}
+
+.stars {
+background:#000 url(images/stars.png) repeat top center;
+z-index:-1;
+}
+
+.twinkling{
+background:transparent url(images/twinkling.png) repeat top center;
+z-index:0;
+animation:move-twink-back 200s linear infinite;
+}
+
+.clouds{
+  background:transparent url(images/clouds.png) repeat top center;
+  z-index:2;
+  opacity: -0.6;
+  animation:move-clouds-back 200s linear infinite;
+}
+
+.carousel-item{
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #FFFAFA;
+}
+
+#myCarousel {
+  opacity: 1;
+  position: relative;
+  z-index: 2;
+}
+.logo-image{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 20px;
+
+}
+.navbar{
+  z-index: 3;
+  color: #010145;
+}
+
+section{
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  /*align-content: center;*/
+  align-content: center;
+  min-height: 50vh;
+}
+
+
+.animation-container{
+  position: absolute;
+  display: flex; 
+  z-index: 3;
+} 
+
+.fixed-element {
+  position: fixed;
+  display:flex;
+  z-index: 3;
+}
+
+.rotate-image {
+  animation: rotation 16s infinite linear;
+}
+
+/*https://www.youtube.com/watch?v=T33NN_pPeNI&t=164s
+@media(prefers-reduced-motion){*/
+  .hidden {
+    opacity: 0;
+    transform: translateX(-100%) rotate(360deg);
+    transition: all 2s;
+  }
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0) rotate(360deg);
+}
+
+.news {
+  color:#FFFAFA;
+}
+
+
+.news:hover {
+  color:#FFFAFA;
+}
+
